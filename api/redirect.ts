@@ -1,10 +1,10 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import fetch from 'node-fetch';
+import fetch from '@vercel/fetch';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     // API-URL für Discord-Guild-Widget
-    const { guildId = '831161440705839124' } = req.query
+    const { guildId = '831161440705839124' } = req.query;
     const apiUrl = `https://discord.com/api/guilds/${guildId}/widget.json`;
 
     // Die API abrufen
@@ -17,13 +17,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const instantInvite = data.instant_invite;
 
-
     // Weiterleitung zur Discord-Einladung
     res.writeHead(302, { Location: instantInvite });
     res.end();
-    return res.json({
-        url: `${instantInvite}`,
-      })
   } catch (error) {
     console.error(error);
     res.status(500).send('Ein Fehler ist aufgetreten');
