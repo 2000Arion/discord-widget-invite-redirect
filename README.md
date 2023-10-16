@@ -25,4 +25,4 @@ Error messages will look like this
 
 [https://discord.arion2000.xyz/api/ping](https://discord.arion2000.xyz/api/ping "This link will take you to a page that will show you the ping to the API server.")
 
-You can also add `?lang=de' or `?lang=en' to get the latency message in another language.
+You can also add `?lang=de` or `?lang=en` to get the latency message in another language.
