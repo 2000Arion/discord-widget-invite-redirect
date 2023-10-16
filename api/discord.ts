@@ -21,6 +21,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     res.end();
   } catch (error) {
     console.error(error);
-    res.status(500).send(`Ein Fehler ist aufgetreten: ${error.message}`);
+    return res.status(500).json({
+      error: `${error.message}`,
+    })
+
+    }
   }
-}
