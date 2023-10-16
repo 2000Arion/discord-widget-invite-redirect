@@ -9,7 +9,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Die API abrufen
     const response = await fetch(apiUrl);
     if (!response.ok) {
-      throw new Error(`Fehler beim Abrufen der API: ${response.status} ${response.statusText}`);
+      throw new Error(`${response.status} ${response.statusText}`);
     }
 
     const data: any = await response.json(); // Hier wird "any" als Datentyp verwendet
@@ -22,7 +22,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   } catch (error) {
     console.error(error);
     return res.status(500).json({
-      error: `${error.message}`,
+      error: {
+        de: `Fehler beim Abrufen der API: ${error.message}`,
+        en: `Error retrieving API: ${error.message}`
+      },
     })
 
     }
