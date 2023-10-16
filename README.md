@@ -8,7 +8,7 @@ With this API, you get a link to redirect to the widget's invitelink, even witho
 
 [https://discord.arion2000.xyz/api/discord?guildId=[guildId]](https://discord.arion2000.xyz/api/discord "This link will take you to an exemplary redirection that can be performed by the API.")
 
-Don't forget to replace [guildId] with the id of the server!
+Don't forget to replace **[guildId]** with the id of the server!
 
 Error messages look like this:
 
