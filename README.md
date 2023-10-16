@@ -15,7 +15,7 @@ Error messages will look like this
 ```json
 {
     "error": {
-    "de":"Failed to retrieve API: 400 Bad Request",
+    "de":"Fehler beim Abrufen der API: 400 Bad Request",
     "en":"Error retrieving API: 400 Bad Request"
     }
 }
