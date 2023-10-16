@@ -1,31 +1,28 @@
-# Node.js Hello World
+# Simple discord widget invite link API
 
-Simple Node.js + Vercel example that returns a "Hello World" response.
+With this API, you get a link to redirect to the widget's invitelink, even without using the widget.
 
-## How to Use
+## Use this API as follows
 
-You can choose from one of the following two methods to use this repository:
+### Be redirected to the widget invitelink of a server:
 
-### One-Click Deploy
+[https://discord.arion2000.xyz/api/discord?guildId=[guildId]](https://discord.arion2000.xyz/api/discord "This link will take you to an exemplary redirection that can be performed by the API.")
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+Don't forget to replace [guildId] with the id of the server!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/examples/tree/main/solutions/node-hello-world&project-name=node-hello-world&repository-name=node-hello-world)
+Error messages look like this:
 
-### Clone and Deploy
-
-```bash
-git clone https://github.com/vercel/examples/tree/main/solutions/node-hello-world
+```json
+{
+    "error": {
+    "de":"Fehler beim Abrufen der API: 400 Bad Request",
+    "en":"Error retrieving API: 400 Bad Request"
+    }
+}
 ```
 
-Install the Vercel CLI:
+### Check latency to the API server:
 
-```bash
-npm i -g vercel
-```
+[https://discord.arion2000.xyz/api/ping](https://discord.arion2000.xyz/api/ping "This link will take you to a page that will show you the ping to the api server.")
 
-Then run the app at the root of the repository:
-
-```bash
-vercel dev
-```
+You can also append `?lang=de` or `?lang=en` to get the latency message in another language.
