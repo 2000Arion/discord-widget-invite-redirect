@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "node-fetch": "^3.3.2",
-    "vercel": "^35.0.2"
+    "vercel": "^36.0.0"
   }
 }
