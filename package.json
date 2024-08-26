@@ -7,7 +7,7 @@
   "private": true,
   "devDependencies": {
     "@types/node": "^22.0.0",
-    "@vercel/node": "^3.0.7",
+    "@vercel/node": "^3.2.9",
     "typescript": "^5.2.2"
   },
   "dependencies": {
