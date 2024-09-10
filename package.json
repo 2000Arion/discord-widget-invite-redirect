@@ -1,6 +1,6 @@
 {
   "name": "discord-widget-invite-redirect",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "API to be redirected to the invitelink of a Discord server widget.",
   "repository": "https://github.com/vercel/examples.git",
   "license": "MIT",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "node-fetch": "^3.3.2",
-    "vercel": "^37.4.0"
+    "vercel": "^37.4.0",
+    "@vercel/fun" : "^1.1.1"
   }
 }
