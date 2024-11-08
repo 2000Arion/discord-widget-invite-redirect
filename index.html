@@ -7,7 +7,6 @@
     <title>Weiterleitung - arion2000.xyz API</title>
 
     <style>
-        /* Gesamtseitenstil */
         body, html {
             margin: 0;
             padding: 0;
@@ -19,14 +18,12 @@
             overflow: hidden;
         }
 
-        /* Wrapper für die Ladeanimation */
         .loader {
             position: relative;
             width: 32px;
             height: 32px;
         }
 
-        /* Stil für die Quadrate */
         .loader div {
             position: absolute;
             width: 10px;
@@ -35,20 +32,17 @@
             animation: wanderingCubes 1.8s ease-in-out infinite;
         }
 
-        /* Erstes Quadrat, Animation startet ohne Verzögerung */
         .loader div:nth-child(1) {
             top: 0;
             left: 0;
         }
 
-        /* Zweites Quadrat mit Verzögerung */
         .loader div:nth-child(2) {
             top: 0;
             left: 0;
             animation-delay: -0.9s;
         }
 
-        /* Keyframes für die kreisförmige Bewegung */
         @keyframes wanderingCubes {
             0% {
                 transform: translate(0, 0) rotate(0deg) scale(1);
@@ -70,7 +64,6 @@
 </head>
 
 <body onload="">
-    <!-- Ladeanimation -->
     <div class="loader">
         <div></div>
         <div></div>
