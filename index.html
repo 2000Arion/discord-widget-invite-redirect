@@ -4,13 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>arion2000.xyz API</title>
-    <link rel="stylesheet" href="https://media.arion2000.xyz/cdn/css/redirect.min.css">
-    <script src="https://media.arion2000.xyz/cdn/js/redirect.min.js"></script>
+    <title>Weiterleitung - arion2000.xyz API</title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1d232e;
+            overflow: hidden;
+        }
+
+        .loader {
+            position: relative;
+            width: 32px;
+            height: 32px;
+        }
+
+        .loader div {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #7984f5;
+            animation: wanderingCubes 1.8s ease-in-out infinite;
+        }
+
+        .loader div:nth-child(1) {
+            top: 0;
+            left: 0;
+        }
+
+        .loader div:nth-child(2) {
+            top: 0;
+            left: 0;
+            animation-delay: -0.9s;
+        }
+
+        @keyframes wanderingCubes {
+            0% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+            25% {
+                transform: translate(22px, 0) rotate(-90deg) scale(0.5);
+            }
+            50% {
+                transform: translate(22px, 22px) rotate(-180deg) scale(1);
+            }
+            75% {
+                transform: translate(0, 22px) rotate(-270deg) scale(0.5);
+            }
+            100% {
+                transform: translate(0, 0) rotate(-360deg) scale(1);
+            }
+        }
+    </style>
 </head>
 
-<body onload="onLoad('/api/discord')">
-    <h3>Weiterleitung...</h3>
+<body onload="getUrlParams()">
+    <div class="loader">
+        <div></div>
+        <div></div>
+    </div>
+
+    <script src="https://media.arion2000.xyz/cdn/js/redirect.min.js"></script>
+    <script>
+        function getUrlParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const guildId = urlParams.get('guildId');
+
+            if (guildId == '' || guildId == undefined || guildId == null) {
+                onLoad('/api/discord');
+            } else {
+                onLoad(`/api/discord/?guildId=${guildId}`);
+            }
+        }
+    </script>
 </body>
 
 </html>
