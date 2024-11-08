@@ -9,8 +9,21 @@
     <script src="https://media.arion2000.xyz/cdn/js/redirect.min.js"></script>
 </head>
 
-<body onload="onLoad('/api/discord')">
+<body onload="getUrlParams()">
     <h3>Weiterleitung...</h3>
+
+    <script>
+        function getUrlParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const guildId = urlParams.get('guildId');
+
+            if (guildId == '' || guildId == undefined || guildId == null) {
+                onLoad('/api/discord');
+            } else {
+                onLoad(`/api/discord/?guildId=${guildId}`);
+            }
+        }
+    </script>
 </body>
 
 </html>
