@@ -13,6 +13,6 @@
   "dependencies": {
     "node-fetch": "^3.3.2",
     "vercel": "^39.2.2",
-    "@vercel/fun" : "^1.1.1"
+    "@vercel/fun" : "^1.1.2"
   }
 }
