@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "node-fetch": "^3.3.2",
-    "vercel": "^41.0.2",
+    "vercel": "^41.0.3",
     "@vercel/fun" : "^1.1.3"
   }
 }
