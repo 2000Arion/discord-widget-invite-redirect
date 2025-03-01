@@ -75,7 +75,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             const guildId = urlParams.get('guildId');
 
-            if (guildId == '' || guildId == undefined || guildId == null) {
+            if (guildId == '' || guildId == undefined) {
                 onLoad('/api/discord');
             } else {
                 onLoad(`/api/discord/?guildId=${guildId}`);
