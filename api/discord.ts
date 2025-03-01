@@ -23,7 +23,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         de: `Fehler beim Abrufen der API: ${error.message}`,
         en: `Error retrieving API: ${error.message}`
       },
-    })
+    });
 
     }
   }
