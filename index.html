@@ -72,8 +72,8 @@
     <script src="https://media.arion2000.xyz/cdn/js/redirect.min.js"></script>
     <script>
         function getUrlParams() {
-            const urlParams = new URLSearchParams(window.location.search).toString().toLowerCase();
-            const guildId = urlParams.get('guildid');
+            const urlParams = new URLSearchParams(window.location.search);
+            const guildId = urlParams.get('guildId');
 
             if (guildId == '' || guildId == undefined) {
                 onLoad('/api/discord');
