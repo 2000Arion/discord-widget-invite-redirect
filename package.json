@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@types/node": "^22.18.8",
+    "@types/node": "^22.18.9",
     "@vercel/node": "^5.3.25",
     "typescript": "^5.9.3"
   },
